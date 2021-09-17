@@ -1,38 +1,268 @@
-.App {
+.trigger {
+  padding: 0 24px !important;
+  font-size: 18px !important;
+  line-height: 64px !important;
+  cursor: pointer !important;
+  transition: color 0.3s !important;
+}
+
+.trigger:hover {
+  color: #1890ff !important;
+}
+
+.logo {
+  height: 32px !important;
+  margin: 16px !important;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.site-layout .site-layout-background {
+  background: rgb(248, 248, 248) !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ant-layout-sider {
+  position: relative;
+  min-width: 0;
+  border-radius: 0 20px 20px 0;
+  background: #fff;
+  transition: all 0.2s;
+  box-shadow: 2px 0 #bcbcbc47
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.ant-menu-item-selected {
+  color: #737373 !important;
+  background-color: #f0f2f5 !important;
+  border-radius: 20px 0 0 20px;
+  border-left: solid #1890ff 3px;
+}
+
+.dashboard-menu-item.ant-menu-item-selected {
+  border-left: solid rgb(178, 216, 230) 3px;
+}
+
+
+.home-menu-item.ant-menu-item-selected {
+  border-left: solid #f8b33e 3px;
+}
+
+
+.finance-menu-item.ant-menu-item-selected {
+  border-left: solid rgb(181, 229, 126) 3px;
+}
+
+
+.ant-menu-inline .ant-menu-item:after{
+  border-right: none;
+}
+.ant-layout-sider-trigger {
+  position: sticky;
+  bottom: 60px;
+  z-index: 1;
+  height: 48px;
+  color: #2f2f2f;
+  line-height: 48px;
+  text-align: center;
+  background: #f0f2f5;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 50px !important;
+  left: 150px;
+}
+
+.menu-icon{
+  font-size: 22px !important;
+}
+
+.home-menu-icon {
+  color: #f8b33e !important;
+}
+
+.dashboard-menu-icon {
+  color: rgb(178, 216, 230) !important;
+}
+
+.finance-menu-icon {
+  color: rgb(181, 229, 126) !important;
+}
+
+.mobile-nav{
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+  background: #fff;
+  box-shadow: 0 0 0 2px #bcbcbc47;
+  cursor: pointer;
+  transition: all 0.2s;
+  left: 150px;
+}
+
+.widget {
+  box-shadow: 0 5px 5px rgba(75, 75, 75, 0.28);
+}
+
+.widget .ant-card-head{
+  border: none;
+}
+
+.widget .ant-card-head-title{
+  background-color: rgb(178, 216, 230);
+  margin: 0 25px 0 25px;
+  border-radius: 0 0 5px 5px;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.finance .widget .ant-card-body {
+  height: 150px;
+  display: flex !important;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center !important;
 }
 
-.App-link {
-  color: #61dafb;
+.savings  {
+  background: #f8bc55;
+}
+.savings h1 {
+  color: #ffffff !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.charge .ant-card-head-title{
+  background-color: rgb(178, 216, 230);
+}
+
+.discharge .ant-card-head-title{
+  background-color: rgb(181, 229, 126);
+}
+
+.savings .ant-card-head-title{
+  background-color: #f8b33e;
+}
+
+.dashboard-select {
+  background: #ffffff;
+  width: 170px !important;
+  box-shadow: 0 5px 5px rgba(75, 75, 75, 0.28);
+  border-radius: 50px !important;
+  text-align: left;
+}
+ .today-select {
+  text-align: left;
+  width: 95% !important;
+  border: solid rgb(225, 225, 225) 1px;
+  border-radius: 5px !important;
+  margin-bottom: 10px;
+}
+
+.dashboard .widget .ant-card-body {
+  height: 150px;
+}
+.utility  {
+  background-image: linear-gradient(rgb(178, 223, 120), rgb(138, 208, 49));
+}
+
+.utility .ant-card-head-title{
+  background-color: #ffffff;
+  color: rgb(135, 208, 43);
+}
+
+.battery  {
+  background-image: linear-gradient(rgb(243, 189, 83), rgb(255, 162, 7));
+}
+.battery .ant-card-head-title{
+  background-color: #ffffff;
+  color: rgb(255, 162, 7);
+}
+
+.pv  {
+  background-image: linear-gradient(rgb(168, 214, 237), rgb(78, 176, 221));
+}
+.pv .ant-card-head-title{
+  background-color: #ffffff;
+  color: rgb(78, 176, 221);
+}
+.today{
+  border-radius: 20px;
+  height: 100%;
+}
+.today .ant-card-head-title{
+  background-color: rgb(228, 228, 228);
+  color: rgb(115, 115, 115);
+  margin: 0 25px 0 25px;
+  border-radius: 0 0 5px 5px;
+  text-align: center;
+}
+.today .ant-card-head{
+  border: none;
+  position: sticky !important;
+}
+
+.today-data{
+  text-align: left;
+  border-radius: 10px;
+  padding: 10px;
+  border: solid rgb(225, 225, 225) 1px;
+  margin-bottom: 10px;
+}
+
+.today-data td{
+  font-size: 12px !important;
+}
+
+.today-data-wrapper {
+  height: 350px;
+  overflow: auto;
+}
+
+/*Home*/
+.carousel-item{
+  box-shadow: 0 5px 5px rgba(75, 75, 75, 0.22);
+  border-radius: 10px;
+}
+.carousel-item  .ant-card-head{
+  border: none;
+}
+.carousel-item  .ant-card-head-title{
+  margin: -15px 25px 0 25px;
+  border-radius: 0 0 5px 5px;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.c-item-dark .ant-card-head-title{
+  background-color: rgb(153, 153, 153);
+}
+.c-item-dark{
+  border:  rgb(153, 153, 153) solid 2px;
+}
+
+.c-item-warning .ant-card-head-title{
+  background-color: rgb(245, 179, 66);
+}
+.c-item-warning{
+  border:  rgb(245, 179, 66) solid 2px;
+}
+.c-item-primary .ant-card-head-title{
+  background-color: rgb(176, 217, 235);
+}
+.c-item-primary{
+  border:  rgb(176, 217, 235) solid 2px;
+}
+/* information*/
+
+.information {
+  padding: 0 !important;
+  background: #ffffff;
+  border-radius: 15px;
+  border: solid 1px rgba(75, 75, 75, 0.22);
+  box-shadow: 0 5px 5px rgba(75, 75, 75, 0.22);
+}
+.information-dark .ant-card-head-title  {
+  background: rgb(153, 153, 153);
 }
